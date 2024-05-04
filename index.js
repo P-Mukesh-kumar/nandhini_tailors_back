@@ -19,7 +19,7 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use('/authposts', authRouter)
 app.use('/verify', emailverify)
-const CONNECTION_URL = process.env.MONGODB_CONNECTION_URL;
+const CONNECTION_URL = "mongodb+srv://tailor1234:okveUPmqr9PgXzMR@ac-vsgvqgg-shard-00-00.qwxjklm.mongodb.net/test?authSource=admin&replicaSet=atlas-1491sh-shard-0&ssl=true";
 const PORT = process.env.PORT || 5000;
 
 mongoose
