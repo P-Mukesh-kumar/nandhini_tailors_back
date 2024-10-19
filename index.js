@@ -19,9 +19,9 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use('/authposts', authRouter)
 app.use('/verify', emailverify)
-const CONNECTION_URL = "mongodb+srv://tailor1234:okveUPmqr9PgXzMR@tailor1234.qwxjklm.mongodb.net/";
+const CONNECTION_URL = "mongodb+srv://tailor1234:okveUPmqr9PgXzMR@tailor1234.qwxjklm.mongodb.net/?retryWrites=true&w=majority&appName=tailor1234";
 const PORT = process.env.PORT || 5000;
-//mongodb+srv://tailor1234:okveUPmqr9PgXzMR@tailor1234.qwxjklm.mongodb.net/
+//mongodb+srv://tailor1234:okveUPmqr9PgXzMR@tailor1234.qwxjklm.mongodb.net/?retryWrites=true&w=majority&appName=tailor1234
 mongoose
   .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
